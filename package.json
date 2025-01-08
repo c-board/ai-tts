@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "chrome-types": "^0.1.327"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

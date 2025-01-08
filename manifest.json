@@ -1,0 +1,25 @@
+{
+  "name": "GPT TTS",
+  "description": "GPT TTS for web pages",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "images/center-align_128.png"
+  },
+  "icons": {
+    "16": "images/center-align_16.png",
+    "32": "images/center-align_32.png",
+    "48": "images/center-align_48.png",
+    "128": "images/center-align_128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/center.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*",
+        "https://www.google.com/search*"
+      ]
+    }
+  ]
+}
