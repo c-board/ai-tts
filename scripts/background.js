@@ -14,7 +14,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.scripting.executeScript(
       {
         target: { tabId: tab.id },
-        files: ["content.js"] // Inject the content script
+        files: ["scripts/content.js"] // Inject the content script
       },
       () => {
         // Send the selected text to the content script
