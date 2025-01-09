@@ -1,10 +1,15 @@
 {
   "name": "GPT TTS",
-  "description": "GPT TTS for web pages",
+  "description": "Highlight text and convert it to speech using OpenAI's API.",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_icon": "images/center-align_128.png"
+    "default_popup": "popup.html"
   },
   "icons": {
     "16": "images/center-align_16.png",
@@ -14,12 +19,9 @@
   },
   "content_scripts": [
     {
-      "js": ["scripts/center.js"],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*",
-        "https://www.google.com/search*"
-      ]
+      "js": ["scripts/center.js", "content.js"],
+      "content_scripts": [],
+      "matches": ["<all_urls>"]
     }
   ]
 }
