@@ -12,10 +12,10 @@
     "default_popup": "popup.html"
   },
   "icons": {
-    "16": "images/center-align_16.png",
-    "32": "images/center-align_32.png",
-    "48": "images/center-align_48.png",
-    "128": "images/center-align_128.png"
+    "16": "images/chat-bubble_16.png",
+    "32": "images/chat-bubble_32.png",
+    "48": "images/chat-bubble_48.png",
+    "128": "images/chat-bubble_128.png"
   },
   "content_scripts": [
     {
