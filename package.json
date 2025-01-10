@@ -1,11 +1,17 @@
 {
   "dependencies": {
     "chrome-types": "^0.1.327",
-    "dotenv": "^16.4.7"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "openai": "^4.78.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "typescript": "^4.5.4"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc"
   }
