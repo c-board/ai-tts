@@ -1,4 +1,6 @@
 # ai-tts
-Google Chrome Extension to enable text to speech for webpages
+Google chrome extension using openai for text to speech. 
+
+Select text, right click, and select 'Read text aloud'. 
 
 [Icons created by Smashicons - Flaticon](https://www.flaticon.com/)
