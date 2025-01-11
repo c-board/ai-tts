@@ -8,9 +8,6 @@
   },
   "version": "1.0",
   "manifest_version": 3,
-  "action": {
-    "default_popup": "popup.html"
-  },
   "icons": {
     "16": "images/chat-bubble_16.png",
     "32": "images/chat-bubble_32.png",
