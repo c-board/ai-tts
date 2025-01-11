@@ -27,6 +27,8 @@ app.post("/generate-speech", async (req, res) => {
       .json({ error: "Text is required for speech synthesis." });
   }
 
+  let filePath;
+
   try {
     // Generate speech with OpenAI
     const mp3 = await openai.audio.speech.create({
@@ -37,7 +39,7 @@ app.post("/generate-speech", async (req, res) => {
 
     const buffer = Buffer.from(await mp3.arrayBuffer());
     const fileName = `speech-${Date.now()}.mp3`;
-    const filePath = path.resolve(`./public/${fileName}`);
+    filePath = path.resolve(`./public/${fileName}`);
 
     // Save MP3 file
     await fs.writeFile(filePath, buffer);
@@ -47,6 +49,18 @@ app.post("/generate-speech", async (req, res) => {
   } catch (error) {
     console.error("Error generating speech:", error);
     res.status(500).json({ error: "Failed to generate speech." });
+  } finally {
+    if (filePath) {
+      setTimeout(() => {
+        fs.unlink(filePath, (err) => {
+          if (err) {
+            console.error("Error deleting file:", err);
+          } else {
+            console.log("File deleted successfully");
+          }
+        });
+      }, 5000);
+    }
   }
 });
 

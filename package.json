@@ -13,6 +13,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "rmPub": "rm -rf public/*"
   }
 }
